@@ -1,0 +1,86 @@
+.auth-form {
+  flex: 1;
+  max-width: 400px;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.auth-form h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  text-align: left;
+  color: #333;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 16px;
+  padding-right: 44px; /* deja espacio para botón en todos */
+  border: none;
+  border-radius: 10px;
+  background-color: #f6f7fb;
+  font-size: 16px;
+  margin-bottom: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Contenedor solo para inputs de contraseña */
+.auth-form .password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* El input de contraseña hereda lo de .auth-form input */
+.auth-form .password-wrapper input {
+  padding-right: 44px; /* importante: solo agrega este */
+}
+
+/* Botón para ver/ocultar contraseña */
+.auth-form .toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+  padding: 0;
+}
+
+.password-icon {
+  width: 20px;
+  height: 20px;
+}
+.auth-form button[type="submit"] {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(90deg, #ff6a00 0%, #ff8c00 100%);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.auth-form .divider {
+  text-align: center;
+  margin: 24px 0 16px;
+  color: #a9a9a9;
+  font-size: 14px;
+}
+
+.auth-form .social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.auth-form .social-buttons img {
+  height: 32px;
+  cursor: pointer;
+}
