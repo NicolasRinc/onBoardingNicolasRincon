@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.text-container {
+  flex: 1;
+  text-align: left;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.text1 {
+  font-size: 44px;
+  margin: 0 0 20px 0;
+}
+
+.text2 {
+  font-size: 31px;
+  margin: 0 0 20px 0;
+}
+
+.text3 {
+  font-size: 16px;
+  margin: 0 0 10px 0;
+}
+
+.vinculo {
+  color: #ff6600;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+
+body{
+    justify-content: center;
+}
