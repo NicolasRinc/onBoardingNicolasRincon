@@ -12,11 +12,13 @@ type Props = {
   title: string;
   primaryButtonText: string;
   inputs: InputField[];
+  onSubmit: (formData: any) => void;
 };
 
-export function AuthForm({ title, primaryButtonText, inputs }: Props) {
+export function AuthForm({ title, primaryButtonText, inputs, onSubmit }: Props) {
   const [formData, setFormData] = useState<{ [key: string]: string }>({});
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -24,7 +26,18 @@ export function AuthForm({ title, primaryButtonText, inputs }: Props) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
+
+    // Validar si hay dos contraseñas y que coincidan
+    const password = formData["password"];
+    const confirmPassword = formData["confirmPassword"];
+
+    if (confirmPassword !== undefined && password !== confirmPassword) {
+      setError("Las contraseñas no coinciden");
+      return;
+    }
+
+    setError(""); // Limpia errores previos si todo está bien
+    onSubmit(formData);
   };
 
   return (
@@ -52,17 +65,18 @@ export function AuthForm({ title, primaryButtonText, inputs }: Props) {
               type="button"
               onClick={() => setShowPassword(!showPassword)}
               className="toggle-password"
-            >      
-                <img
+            >
+              <img
                 src={showPassword ? "/icons/hide.png" : "/icons/view.png"}
                 alt="Ver contraseña"
                 className="password-icon"
-                />
-             
+              />
             </button>
           )}
         </div>
       ))}
+
+      {error && <p style={{ color: 'red', fontSize: '14px' }}>{error}</p>}
 
       <button type="submit">{primaryButtonText}</button>
 
