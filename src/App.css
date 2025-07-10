@@ -23,7 +23,7 @@ body {
 .main-content {
   display: flex;
   flex-direction: row;
-  align-items: flex-start; /* <- esto hace que ambos se alineen arriba */
+  align-items: flex-start; 
   justify-content: center;
   gap: 60px;
   flex-wrap: wrap;
