@@ -27,7 +27,6 @@ export function AuthForm({ title, primaryButtonText, inputs, onSubmit }: Props) 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Validar si hay dos contraseñas y que coincidan
     const password = formData["password"];
     const confirmPassword = formData["confirmPassword"];
 
@@ -36,7 +35,7 @@ export function AuthForm({ title, primaryButtonText, inputs, onSubmit }: Props) 
       return;
     }
 
-    setError(""); // Limpia errores previos si todo está bien
+    setError(""); 
     onSubmit(formData);
   };
 

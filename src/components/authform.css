@@ -15,7 +15,7 @@
 .auth-form input {
   width: 100%;
   padding: 16px;
-  padding-right: 44px; /* deja espacio para botón en todos */
+  padding-right: 44px; 
   border: none;
   border-radius: 10px;
   background-color: #f6f7fb;
@@ -25,18 +25,17 @@
   box-sizing: border-box;
 }
 
-/* Contenedor solo para inputs de contraseña */
 .auth-form .password-wrapper {
   position: relative;
   width: 100%;
 }
 
-/* El input de contraseña hereda lo de .auth-form input */
+
 .auth-form .password-wrapper input {
-  padding-right: 44px; /* importante: solo agrega este */
+  padding-right: 44px; 
 }
 
-/* Botón para ver/ocultar contraseña */
+
 .auth-form .toggle-password {
   position: absolute;
   right: 12px;

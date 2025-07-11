@@ -15,13 +15,12 @@ function App() {
     try {
       const response = await loginUsuario(formData);
 
-      // Esto solo se ejecuta si el status es 200
       if (response.message === "Inicio de sesión exitoso") {
         navigate("/survey", { state: { userData: response.data } });
       }
     } catch (error: any) {
       if (error.response) {
-        // Si la API responde con error 401 u otro, muestra su mensaje
+
         alert(error.response.data.message);
       } else {
         console.error("Error al iniciar sesión:", error);
