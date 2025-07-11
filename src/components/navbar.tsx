@@ -1,6 +1,6 @@
 import logoIcon from '../assets/logo-icon.png';
 import logoText from '../assets/logo-text.png';
-import './Navbar.css';
+import './navbar.css';
 
 export function Navbar() {
   return (
