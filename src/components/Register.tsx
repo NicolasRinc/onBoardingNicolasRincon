@@ -32,7 +32,7 @@ export function Register() {
           subtitle="Te invitamos a crear tu cuenta"
           description="Si ya tienes una cuenta puedes"
           linkText="Iniciar sesión aqui!"
-          linkHref="/"
+          linkHref="/login"
         />
         
 

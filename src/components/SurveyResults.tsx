@@ -39,7 +39,6 @@ export function SurveyResults() {
   if (loading) return <p>Cargando resultados...</p>;
   if (error || !data) return <p>Error al cargar resultados.</p>;
 
-  // Parsear respuestas de encuesta
   let respuestas: Record<string, string> = {};
     let parseError = false;
 
@@ -82,7 +81,7 @@ export function SurveyResults() {
       <div className="button-wrapper" style={{ marginTop: "20px" }}>
         <button
           className="primary-button"
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/login")}
         >
           Volver al inicio
         </button>
