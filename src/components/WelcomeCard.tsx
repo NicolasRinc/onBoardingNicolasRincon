@@ -1,5 +1,5 @@
 
-import './WelcomeCard.css';
+import './welcomeCard.css';
 import mainImage from '../assets/main.png';
 import { Link } from 'react-router-dom';
 type WelcomeCardProps = {
