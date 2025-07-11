@@ -16,9 +16,9 @@ export function WelcomeCard({ title, subtitle, description, linkText, linkHref }
       <div className="text-container">
         <h1 className="text1">{title}</h1>
         <h2 className="text2">{subtitle}</h2>
-        <p className="text3">{description} 
-        <p></p>
-        <Link className="vinculo" to={linkHref}>{linkText}</Link></p>
+        <p className="text3">{description} </p>
+        <a></a>
+        <Link className="vinculo" to={linkHref}>{linkText}</Link>
       </div>
 
       <div className="image-container">

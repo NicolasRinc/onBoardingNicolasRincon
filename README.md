@@ -1,69 +1,48 @@
-# React + TypeScript + Vite
+# Proyecto - Onboarding Compensar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada con React + Vite para registro y login de usuarios, seguido de una encuesta personalizada y consulta de esos resultados, consumiendo una API externa publica via Axios
 
-Currently, two official plugins are available:
+# Instalación de dependencias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clonar el siguiente repositorio
 
-## Expanding the ESLint configuration
+https://github.com/NicolasRinc/onBoardingNicolasRincon
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# Acceder a la carpeta del proyecto
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2. cd onBoardingNicolasRincon
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+# Instalar las dependencias con el siguiente comando
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. npm install
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# Para ejecutar el proyecto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+4. npm run dev
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# En el navegador
+
+5. http://localhost:5181/ (o el puerto que haya sido asignado)
+
+# Para compilar en producción
+
+6. npm run build
+
+7. npm run preview
+
+# Estructura
+
+# /src/components/ -> Componentes usados en la app como Authform, SurveyForm, etc.
+
+# /src/api -> Servicios axios para consumir la API
+
+# /src/assets -> Imagenes y recursos
+
+# Tecnologias usadas
+
+* React
+* Vite
+* Axios
+* TypeScript
+* API externa publica REST
+
